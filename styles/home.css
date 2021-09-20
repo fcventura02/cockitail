@@ -27,15 +27,36 @@
 }
 
 .contain-search .input-search {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary-bg);
   width: 90%;
   max-width: 350px;
+  border-radius: 8px;
 }
 
 .contain-search .input-search input {
-  width: 100%;
-  font-size: 1.5rem;
-  border-radius: 8px;
+  background: none;
+  width: 95%;
+  font-size: 1.2rem;
+  padding: 8px;
+  outline: none;
+  border: none;
+}
+
+.contain-search .input-search button {
+  box-sizing: border-box;
+  width: 39px;
+  height: 39px;
   padding: 4px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  background-color: var(--color-primary-bt);
+  background-image: url("../images/icons8-search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px;
 }
 
 .drinks {
@@ -119,6 +140,7 @@
 
 @media (min-width: 768px) {
   .card-drink .drink-info {
+    background-color: rgba(255, 255, 255, 0.541);
     color: var(--text-color-black);
     display: block;
     flex-direction: column;

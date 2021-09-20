@@ -1,5 +1,9 @@
-import { randomDrinks } from "./drinksApi.js";
+import { randomDrinks, searchDrink } from "./drinksApi.js";
 const containerDrinks = document.getElementById("container-drinks");
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-btn");
+const loader = document.getElementById("loader");
+const titleResult = document.getElementById("title-result");
 
 const createCard = (id, name, img, alcoholic) => {
   const cardDrink = document.createElement("div");
@@ -24,6 +28,35 @@ const createCard = (id, name, img, alcoholic) => {
   return cardDrink;
 };
 
+const renderDrinks = (arrDrinks) => {
+  for (const iterator of arrDrinks) {
+    const { idDrink, strAlcoholic, strDrink, strDrinkThumb } = iterator;
+    containerDrinks.appendChild(
+      createCard(idDrink, strDrink, strDrinkThumb, strAlcoholic)
+    );
+  }
+};
+
+const getDrinksByName = () => {
+  loader.style.display = "block";
+  titleResult.innerText = `Você buscou por: ${searchInput.value}`;
+  searchDrink(searchInput.value)
+    .then((res) => {
+      containerDrinks.innerHTML = "";
+      renderDrinks(res);
+    })
+    .then(() => (loader.style.display = "none"));
+};
+
+searchInput.addEventListener("keypress", ({ key }) => {
+  if (key === "Enter") {
+    getDrinksByName();
+  }
+});
+searchButton.addEventListener("click", () => {
+  getDrinksByName();
+});
+
 Promise.all([
   randomDrinks(),
   randomDrinks(),
@@ -33,11 +66,7 @@ Promise.all([
   randomDrinks(),
 ])
   .then((res) => {
-    for (const iterator of res) {
-      const { idDrink, strAlcoholic, strDrink, strDrinkThumb } = iterator;
-      containerDrinks.appendChild(
-        createCard(idDrink, strDrink, strDrinkThumb, strAlcoholic)
-      );
-    }
+    containerDrinks.innerHTML = "";
+    renderDrinks(res);
   })
-  .then((res) => (document.getElementById("loader").style.display = "none"));
+  .then((res) => (loader.style.display = "none"));
