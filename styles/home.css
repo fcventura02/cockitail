@@ -44,6 +44,13 @@
   width: 100%;
 }
 
+.drinks h2 {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  font-size: 1.7rem;
+  color: var(--text-color-black);
+}
+
 .card-drinks {
   display: flex;
   flex-wrap: wrap;
@@ -62,29 +69,73 @@
   position: relative;
 }
 
-.card-drink .drink-name {
-	display: flex;
+.card-drink .drink-info {
+  background-color: var(--color-secondary-bg);
+  box-sizing: border-box;
   width: 100%;
-  height: 100%;
   padding: 4px;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 0;
-  opacity: 0;
-  transition: opacity 0.6s;
+  opacity: 1;
 }
 
-.card-drink .drink-name span {
+.card-drink .drink-info p {
+  color: var(--text-color-with);
   font-weight: 700;
   font-size: 1.2rem;
+}
+.card-drink .drink-info p.alcoholic {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 1rem;
+  background: var(--card-color-bg-alcoholic);
+  color: var(--text-color-black);
+}
+
+.card-drink .drink-info p.no-alcoholic {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 1rem;
+  background: var(--card-color-bg-no-alcoholic);
+  color: var(--text-color-black);
 }
 
 .card-drink .drink-img {
   width: 100%;
 }
 
-.card-drink:hover .drink-name {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.541);
+@media (max-width: 768px) {
+  .card-drink .drink-info p {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-drink .drink-info {
+    color: var(--text-color-black);
+    display: block;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+
+  .card-drink:hover .drink-info {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.541);
+  }
+
+  .card-drink .drink-info p {
+    color: var(--text-color-black);
+  }
 }

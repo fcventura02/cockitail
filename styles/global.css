@@ -12,10 +12,14 @@
 
 :root {
   --font-robot: "Roboto", sans-serif;
+  --text-color-black: #2c3e50;
+  --text-color-with: #ecf0f1;
+  --card-color-bg-no-alcoholic: #2ecc71;
+  --card-color-bg-alcoholic: #f1c40f;
   --color-primary-bg: #ecf0f1;
-	--color-bg: #1B97F2;
+  --color-secondary-bg: #1b97f2;
   --color-primary-bt: #f1c40f;
-	--color-secondary-bt: #f39c12;
+  --color-secondary-bt: #f39c12;
 }
 
 body {
@@ -26,8 +30,8 @@ body {
   background-color: var(--color-primary-bg);
 }
 
-ul{
-	list-style: none;
+ul {
+  list-style: none;
 }
 
 a {
