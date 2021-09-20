@@ -5,6 +5,3 @@ hamburguerBtn.addEventListener("click", ()=>{
 	menu.classList.toggle("activit")
 	menu.classList.toggle("not-activit")
 })
-
-console.log("carregando")
-window.onload = ()=>{console.log("Load")}
