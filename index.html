@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
-    <link rel="preload" href="styles/preloader.css" as="style">
-		<link rel="preload" href="styles/global.css" as="style">
-		<link rel="preload" href="images/loading.svg" as="image">
+    <link rel="preload" href="styles/preloader.css" as="style" />
+    <link rel="preload" href="styles/global.css" as="style" />
+    <link rel="preload" href="images/loading.svg" as="image" />
+    <link rel="prefetch" href="scripts/renderDrinksHome.js" as="script">
     <title>Cocktail</title>
     <!--styles-->
     <link rel="stylesheet" href="./styles/preloader.css" />
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="./styles/home.css" />
     <!--scripts-->
     <script src="scripts/menu-btn.js" defer></script>
-    <script src="scripts/drinksApi.js" defer></script>
+    <script src="./scripts/renderDrinksHome.js" type="module" defer></script>
   </head>
   <body>
     <div id="preloader"></div>
@@ -49,37 +50,8 @@
       </section>
 
       <section class="drinks">
-        <div class="container card-drinks">
-          <div class="card-drink">
-            <img
-              class="drink-img"
-              src="https://www.thecocktaildb.com/images/media/drink/xvwusr1472669302.jpg"
-              alt="drink name"
-            />
-            <div class="drink-name">
-              <span> 747 Drink </span>
-            </div>
-          </div>
-          <div class="card-drink">
-            <img
-              class="drink-img"
-              src="https://www.thecocktaildb.com/images/media/drink/xvwusr1472669302.jpg"
-              alt="drink name"
-            />
-            <div class="drink-name">
-              <span> 747 Drink </span>
-            </div>
-          </div>
-          <div class="card-drink">
-            <img
-              class="drink-img"
-              src="https://www.thecocktaildb.com/images/media/drink/xvwusr1472669302.jpg"
-              alt="drink name"
-            />
-            <div class="drink-name">
-              <span> 747 Drink </span>
-            </div>
-          </div>
+        <div id="container-drinks" class="container card-drinks">
+          <div id="loader"></div>
         </div>
       </section>
     </main>
