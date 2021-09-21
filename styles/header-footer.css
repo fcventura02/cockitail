@@ -94,7 +94,7 @@ footer span {
     display: flex;
     z-index: 1;
     width: 100%;
-    height: 86%;
+    height: 100%;
     transition: 0.7s;
     animation: activeMenu 0.7s;
     opacity: 1;
