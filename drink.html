@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/header-footer.css" />
     <link rel="stylesheet" href="./styles/drink.css" />
+    <!--scripts-->
+    <script src="./scripts/menu-btn.js" defer></script>
+    <script src="scripts/drinksApi.js" type="export" defer></script>
+    <script src="scripts/renderDrink.js" type="module" defer></script>
   </head>
   <body>
     <div id="preloader"></div>
@@ -43,18 +47,19 @@
         <div class="container container-drink">
           <div class="thumbnail">
             <img
+              id="thumbnail"
               class="thumbnail-image"
-              src="https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
+              src="https://via.placeholder.com/318"
               alt="thumbnail"
             />
-            <h1 class="title">Strawberry Margarita</h1>
+            <h1 id="title" class="title"></h1>
             <div class="category">
               <img
                 width="30px"
                 src="./images/icons8-category-48.png"
                 alt="category"
               />
-              <span class="category">Ordinary Drink</span>
+              <span id="category" class="category"></span>
             </div>
 
             <div class="glass">
@@ -63,38 +68,15 @@
                 src="./images/icons8-cocktail-48.png"
                 alt="glass"
               />
-              <span>Cocktail glass</span>
+              <span id="glass"></span>
             </div>
           </div>
           <div class="caintainer-ingedientes">
-            <h2>Ingredientes do Drink</h2>
-            <table>
+            <h2>Drink ingredients</h2>
+            <table id="ingredients">
               <tr>
                 <th>Ingrediente</th>
                 <th>Quantidade</th>
-              </tr>
-              <tr>
-                <td>Strawberry schnapps</td>
-                <td>1/2 oz</td>
-              </tr>
-              <tr>
-                <td>Tequila</td>
-                <td>1 oz</td>
-              </tr>
-              <tr>
-                <td>Triple sec</td>
-                <td>1/2 oz</td>
-              </tr>
-              <tr>
-                <td>Lemon juice</td>
-                <td>1 oz</td>
-              </tr>
-              <tr>
-                <td>Strawberries</td>
-                <td>1 oz</td>
-              </tr>
-              <tr>
-                <td>Salt</td>
               </tr>
             </table>
           </div>
@@ -102,11 +84,9 @@
       </section>
       <section>
         <div class="container container-instruction">
-          <h2>Instruções de Preparo</h2>
-          <p class="instruction">
-            Rub rim of cocktail glass with lemon juice and dip rim in salt.
-            Shake schnapps, tequila, triple sec, lemon juice, and strawberries
-            with ice, strain into the salt-rimmed glass, and serve.
+          <h2>Preparation Instructions</h2>
+          <p id="instructions" class="instruction">
+            
           </p>
         </div>
       </section>

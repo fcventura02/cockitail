@@ -55,6 +55,8 @@
 }
 
 .thumbnail .thumbnail-image {
+  max-width: 318px;
+  max-height: 318px;
   border-radius: 4px 4px 0 0;
 }
 
