@@ -1,0 +1,130 @@
+.container-drink {
+  display: flex;
+}
+
+.thumbnail {
+  display: flex;
+  overflow: hidden;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 90%;
+  max-width: 320px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--color-secondary-bg);
+}
+
+.thumbnail .title {
+  padding: 8px 4px;
+  font-size: 2rem;
+  color: var(--text-color-black);
+  position: relative;
+}
+
+.thumbnail .title::after {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: var(--text-color-black);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.thumbnail span {
+  padding: 4px 4px;
+  font-size: 1rem;
+  color: var(--text-color-black);
+}
+
+.thumbnail .glass,
+.thumbnail .category {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin-left: 4px;
+}
+
+.thumbnail .glass {
+  margin-bottom: 8px;
+}
+
+.thumbnail .category {
+  margin-top: 8px;
+}
+
+.thumbnail .thumbnail-image {
+  border-radius: 4px 4px 0 0;
+}
+
+.caintainer-ingedientes {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding: 8px 0;
+  color: var(--text-color-black);
+}
+
+p {
+  color: var(--text-color-black);
+  letter-spacing: 0.1rem;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  color: var(--text-color-black);
+}
+
+td {
+  color: var(--text-color-black);
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-secondary-bg);
+}
+
+tr:nth-child(even) td {
+  color: var(--text-color-with);
+}
+
+.container-instruction {
+	margin-bottom: 15px;
+}
+
+@media (max-width: 670px) {
+  .container-drink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .caintainer-ingedientes {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .container-instruction {
+    text-align: center;
+  }
+}

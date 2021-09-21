@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <title>Document</title>
+    <link rel="preload" href="styles/preloader.css" as="style" />
+    <link rel="preload" href="styles/global.css" as="style" />
+    <link rel="preload" href="images/loading.svg" as="image" />
+    <title>Cocktail</title>
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/preloader.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./styles/drink.css" />
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <header>
+      <div class="container container-header">
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="Logo" />
+        </a>
+        <nav>
+          <button id="hamburguer-btn">
+            <img src="./images/icons8-menu.svg" alt="menu" />
+          </button>
+          <ul class="not-activit" id="menu">
+            <li>
+              <a class="menu-option" href="./index.html">Home</a>
+            </li>
+            <li>
+              <a class="menu-option" href="./index.html">Ingredientes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="drink-info">
+        <div class="container container-drink">
+          <div class="thumbnail">
+            <img
+              class="thumbnail-image"
+              src="https://www.thecocktaildb.com/images/media/drink/tqyrpw1439905311.jpg"
+              alt="thumbnail"
+            />
+            <h1 class="title">Strawberry Margarita</h1>
+            <div class="category">
+              <img
+                width="30px"
+                src="./images/icons8-category-48.png"
+                alt="category"
+              />
+              <span class="category">Ordinary Drink</span>
+            </div>
+
+            <div class="glass">
+              <img
+                width="30px"
+                src="./images/icons8-cocktail-48.png"
+                alt="glass"
+              />
+              <span>Cocktail glass</span>
+            </div>
+          </div>
+          <div class="caintainer-ingedientes">
+            <h2>Ingredientes do Drink</h2>
+            <table>
+              <tr>
+                <th>Ingrediente</th>
+                <th>Quantidade</th>
+              </tr>
+              <tr>
+                <td>Strawberry schnapps</td>
+                <td>1/2 oz</td>
+              </tr>
+              <tr>
+                <td>Tequila</td>
+                <td>1 oz</td>
+              </tr>
+              <tr>
+                <td>Triple sec</td>
+                <td>1/2 oz</td>
+              </tr>
+              <tr>
+                <td>Lemon juice</td>
+                <td>1 oz</td>
+              </tr>
+              <tr>
+                <td>Strawberries</td>
+                <td>1 oz</td>
+              </tr>
+              <tr>
+                <td>Salt</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container container-instruction">
+          <h2>Instruções de Preparo</h2>
+          <p class="instruction">
+            Rub rim of cocktail glass with lemon juice and dip rim in salt.
+            Shake schnapps, tequila, triple sec, lemon juice, and strawberries
+            with ice, strain into the salt-rimmed glass, and serve.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container container-footer">
+        <p>Desenvolvido por <span>DevVentura</span></p>
+      </div>
+    </footer>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", () => {
+        loader.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
