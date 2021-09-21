@@ -8,7 +8,7 @@ const titleResult = document.getElementById("title-result");
 const createCard = (id, name, img, alcoholic) => {
   const cardDrink = document.createElement("a");
   cardDrink.setAttribute("class", "card-drink");
-  cardDrink.setAttribute("href", `./drink.html?${id}`)
+  cardDrink.setAttribute("href", `./drink.html?${id}` )
   const drinkInfo = document.createElement("div");
   drinkInfo.setAttribute("class", "drink-info");
   const drinkImage = document.createElement("img");
