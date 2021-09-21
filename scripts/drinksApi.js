@@ -13,3 +13,8 @@ export const searchDrink = async (name)=>{
   const res = await apiDrink(`search.php?s=${name}`);
   return res.drinks
 }
+
+export const getDrink = async (id)=>{
+  const res = await apiDrink(`lookup.php?i=${id}`);
+  return res.drinks
+} 
