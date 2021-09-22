@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link rel="preload" href="styles/preloader.css" as="style" />
+    <link rel="preload" href="styles/global.css" as="style" />
+    <link rel="preload" href="images/loading.svg" as="image" />
+    <link rel="prefetch" href="scripts/renderDrinksHome.js" as="script" />
+    <title>Cocktail</title>
+    <!--styles-->
+    <link rel="stylesheet" href="./styles/preloader.css" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./styles/ingredients.css" />
+    <link rel="stylesheet" href="./styles/cardDrinks.css" />
+    <!--scripts-->
+    <script src="scripts/menu-btn.js" defer></script>
+    <script src="./scripts/renderIngredients.js" type="module" defer></script>
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <header>
+      <div class="container container-header">
+        <img src="./images/logo.png" alt="Logo" />
+        <nav>
+          <button id="hamburguer-btn">
+            <img src="./images/icons8-menu.svg" alt="menu" />
+          </button>
+          <ul class="not-activit" id="menu">
+            <li>
+              <a class="menu-option" href="./index.html">Home</a>
+            </li>
+            <li>
+              <a class="menu-option" href="./ingredients.html">Ingredientes</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="header-main">
+        <div class="container contain-ingredientes">
+          <h1>Procure por um ingrediente</h1>
+          <div class="input-search">
+            <input id="search-ingredients" type="text" placeholder="gin"/>
+          </div>
+          <div id="list-ingredients" class="list-ingredients not-active"></div>
+        </div>
+      </section>
+
+      <section class="drinks">
+        <div class="container">
+          <h2 id="title-result">Alguns drinks que você pode gostar</h2>
+          <div id="loader"></div>
+        </div>
+        <div id="container-drinks" class="container card-drinks"></div>
+      </section>
+    </main>
+    <footer>
+      <div class="container container-footer">
+        <p>Desenvolvido por <span>DevVentura</span></p>
+      </div>
+    </footer>
+    <script>
+      var loader = document.getElementById("preloader");
+      window.addEventListener("load", () => {
+        loader.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+.header-main {
+  background-color: var(--color-secondary-bg);
+}
+
+.contain-ingredientes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contain-ingredientes h1 {
+  font-size: 2rem;
+  margin-top: 5px;
+  text-align: center;
+  color: var(--text-color-black);
+}
+
+.input-search {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary-bg);
+  width: 90%;
+  max-width: 350px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+	padding: 2px 4px;
+}
+
+#search-ingredients {
+  padding: 4px 8px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+
+  background: none;
+  width: 95%;
+  outline: none;
+  border: none;
+}
+
+.active {
+  opacity: 1;
+  display: flex;
+  animation: activeSearchIngredients 0.7s alternate;
+}
+
+@keyframes activeSearchIngredients {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.not-active {
+  display: none;
+}
+
+.list-ingredients {
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ingredient {
+  width: 100%;
+  max-width: 120px;
+  margin: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-ingredients .ingredient p {
+  text-align: center;
+	color: var(--text-color-with);
+}
+
+@media (max-width: 420px) {
+  .list-ingredients {
+    max-height: 320px;
+  }
+}
