@@ -1,5 +1,5 @@
 import { randomDrinks, searchDrink } from "./drinksApi.js";
-import { renderDrinks } from "./cardDrinks";
+import { renderDrinks } from "./cardDrinks.js";
 const containerDrinks = document.getElementById("container-drinks");
 const searchInput = document.getElementById("search-input");
 const searchButton = document.getElementById("search-btn");
@@ -34,7 +34,6 @@ Promise.all([
   randomDrinks(),
 ])
   .then((res) => {
-    containerDrinks.innerHTML = "";
-    renderDrinks(res);
+    renderDrinks(res, containerDrinks);
   })
   .then((res) => (loader.style.display = "none"));
