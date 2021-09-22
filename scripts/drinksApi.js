@@ -6,15 +6,25 @@ const apiDrink = async (search) => {
 
 export const randomDrinks = async () => {
   const res = await apiDrink("random.php");
-  return res.drinks[0]
+  return res.drinks[0];
 };
 
-export const searchDrink = async (name)=>{
+export const searchDrink = async (name) => {
   const res = await apiDrink(`search.php?s=${name}`);
-  return res.drinks
-}
+  return res.drinks;
+};
 
-export const getDrink = async (id)=>{
+export const getDrink = async (id) => {
   const res = await apiDrink(`lookup.php?i=${id}`);
-  return res.drinks
-} 
+  return res.drinks;
+};
+
+export const getIngredients = async () => {
+  const res = await apiDrink(`list.php?i=list`);
+  return res.drinks;
+};
+
+export const getDrinkByIngredients = async (ingredient) => {
+  const res = await apiDrink(`filter.php?i=${ingredient}`);
+  return res.drinks;
+};
