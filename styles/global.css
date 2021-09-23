@@ -13,6 +13,7 @@
 :root {
   --font-robot: "Roboto", sans-serif;
   --text-color-black: #2c3e50;
+  --text-color-black-secondary: #212c36;
   --text-color-with: #ecf0f1;
   --card-color-bg-no-alcoholic: #2ecc71;
   --card-color-bg-alcoholic: #f1c40f;

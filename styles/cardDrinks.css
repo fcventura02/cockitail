@@ -33,7 +33,6 @@
   background-color: var(--color-secondary-bg);
   box-sizing: border-box;
   width: 100%;
-  padding: 4px;
   opacity: 1;
 }
 
@@ -41,12 +40,12 @@
   color: var(--text-color-with);
   font-weight: 700;
   font-size: 1.2rem;
+  padding: 4px 8px;
 }
 .card-drink .drink-info p.alcoholic {
+  width: 100%;
   display: inline-block;
-  margin-top: 8px;
-  padding: 4px;
-  border-radius: 4px;
+  margin-top: -1px;
   font-weight: 400;
   font-size: 1rem;
   background: var(--card-color-bg-alcoholic);
@@ -54,10 +53,9 @@
 }
 
 .card-drink .drink-info p.no-alcoholic {
+  width: 100%;
   display: inline-block;
-  margin-top: 8px;
-  padding: 4px;
-  border-radius: 4px;
+  margin-top: -1px;
   font-weight: 400;
   font-size: 1rem;
   background: var(--card-color-bg-no-alcoholic);
@@ -66,6 +64,35 @@
 
 .card-drink .drink-img {
   width: 100%;
+}
+
+.list-pages {
+  width: 100%;
+  margin-bottom: 10px;
+  display: inline-block;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.list-pages button {
+  font-size: 1.2rem;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 4px;
+  color: var(--text-color-black);
+  transition: background-color .3s;
+}
+
+.list-pages button:hover {
+  font-size: 1.3rem;
+  background-color: #ddd;
+  color: var(--text-color-black-secondary);
+}
+
+.list-pages button.page-active {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-secondary-bg);
 }
 
 @media (max-width: 768px) {
