@@ -1,4 +1,5 @@
-import { getDrink } from "./drinksApi.js";
+import { alert } from "./alert.js";
+import { getDrink, randomDrinks } from "./drinksApi.js";
 
 const nameDrink = document.getElementById("title");
 const typeCategory = document.getElementById("category");
@@ -15,7 +16,7 @@ const renderDrink = (arrDrink) => {
     strGlass,
     strInstructions,
     ...itens
-  } = arrDrink[0];
+  } = arrDrink;
 
   imgDrinkThumb.setAttribute("src", strDrinkThumb);
   typeCategory.innerText = strCategory;
@@ -37,11 +38,12 @@ const renderDrink = (arrDrink) => {
   }
 };
 
-const drink = () => {
+const drink = async () => {
   const id = window.location.search.replace("?", "");
-  getDrink(id).then((res) => {
-    renderDrink(res);
-  });
+  const arr = id === "" ? await randomDrinks() : await getDrink(id);
+  arr !== null
+    ? renderDrink(arr)
+    : document.getElementsByTagName("body")[0].appendChild(alert());
 };
 
 drink();
