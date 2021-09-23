@@ -34,11 +34,12 @@ footer {
 }
 
 .container-header ul li {
-  margin: 2px;
+  box-sizing: border-box;
+  margin: 4px;
 }
 
 .container-header .menu-option {
-  color: var(--color-primary-bt);
+  color: var(--card-color-bg-alcoholic);
   padding: 4px;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -59,6 +60,10 @@ footer {
   justify-content: center;
 }
 
+.container-footer p {
+  color: var(--text-color-with);
+}
+
 footer span {
   color: var(--color-primary-bt);
   font-weight: 700;
@@ -67,6 +72,12 @@ footer span {
 @media (max-width: 425px) {
   .container-header nav button {
     display: block;
+  }
+
+  .container-header ul li {
+    text-align: center;
+    width: 100%;
+    margin: 4px;
   }
 
   .container-header .menu-option {
