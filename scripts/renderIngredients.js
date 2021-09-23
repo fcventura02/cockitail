@@ -2,7 +2,7 @@ import { getDrinkByIngredients, getIngredients } from "./drinksApi.js";
 import { renderDrinks } from "./cardDrinks.js";
 const listIngredients = document.getElementById("list-ingredients");
 const searchIngredients = document.getElementById("search-ingredients");
-const containerDrinks = document.getElementById("container-drinks")
+const containerDrinks = document.getElementById("container-drinks");
 const loader = document.getElementById("loader");
 loader.style.display = "none";
 let getlistIngredients = [];
@@ -28,8 +28,10 @@ const createCardIngredient = (name) => {
     loader.style.display = "block";
     getDrinkByIngredients(name)
       .then((res) => {
-        console.log("hello")
         searchIngredients.value = name;
+        document.getElementById(
+          "title-result"
+        ).innerText = `Drinks that have: ${name}`;
         renderListIngredients(filterList());
         renderDrinks(res, containerDrinks);
       })
@@ -69,7 +71,9 @@ const filterList = () => {
 
 //Filtra os ingredientes
 searchIngredients.addEventListener("input", () => {
-  console.log(searchIngredients.value);
+  document.getElementById(
+    "title-result"
+  ).innerText = `Select an ingredient above`;
   listIngredients.innerHTML = "";
   renderListIngredients(filterList());
 });
