@@ -4,7 +4,6 @@ const menu = document.getElementById("menu");
 hamburguerBtn.addEventListener("click", () => {
   menu.classList.toggle("activit");
   menu.classList.toggle("not-activit");
-  console.log(menu.className === "activit");
 
   menu.className === "activit"
     ? (window.onscroll = function () {

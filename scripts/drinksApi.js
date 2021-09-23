@@ -1,7 +1,7 @@
 const apiDrink = async (search) => {
   return await fetch(`https://www.thecocktaildb.com/api/json/v1/1/${search}`)
     .then((res) => res.json())
-    .catch((error) => console.log(error));
+    .catch((error) => console.error(error));
 };
 
 export const randomDrinks = async () => {
