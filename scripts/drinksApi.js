@@ -16,7 +16,7 @@ export const searchDrink = async (name) => {
 
 export const getDrink = async (id) => {
   const res = await apiDrink(`lookup.php?i=${id}`);
-  return res.drinks?[0]:null;
+  return res.drinks ? res.drinks[0] : null;
 };
 
 export const getIngredients = async () => {
