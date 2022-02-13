@@ -24,6 +24,7 @@
   overflow: hidden;
   width: 100%;
   max-width: 250px;
+  height: 250px;
   border-radius: 8px;
   margin: 5px;
   position: relative;
